@@ -290,13 +290,14 @@
           const result = await verifyResponse.json();
           if (result.success) {
             log('Signature verified successfully!', 'success');
+            
             // Add home button
-            const homeBtn = document.createElement('button');
+            const homeBtn = document.createElement('a');
+            homeBtn.href = 'https://minepath.vercel.app';
             homeBtn.className = 'btn btn-primary';
+            homeBtn.style.margin = '10px 0';
+            homeBtn.style.display = 'inline-block';
             homeBtn.innerHTML = '<i class="fas fa-home" style="margin-right: 10px;"></i> Go to Homepage';
-            homeBtn.onclick = function() {
-              window.location.href = 'https://minepath.vercel.app';
-            };
             logEl.appendChild(homeBtn);
           } else {
             log(`Verification failed: ${result.error || 'Unknown error'}`, 'error');
