@@ -151,6 +151,8 @@ body {
   width: 100%;
   max-width: 300px;
   font-family: var(--font-main);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn::after {
@@ -385,6 +387,22 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 2rem 0;
+}
+
+/* Center buttons in action containers */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+/* Center any other containers that might contain buttons */
+.connect-options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 /* Log styles */
